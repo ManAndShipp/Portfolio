@@ -6,6 +6,9 @@
   list-style-type: none
   font-weight: 400
 
+a
+  text-decoration: none
+
 .main-container
   display: flex
   padding: 20px
@@ -15,7 +18,7 @@
   &>section
     width: 100%
     min-height: 100px
-    margin-top: 50px
+    margin-top: 100px
     &:first-child
       margin-top: 0
 
@@ -92,7 +95,6 @@ section.education
             margin-top: 0
           &>h4
             margin-right: 30px
-            font-family: Roboto
             font-weight: bold
             font-size: 16px
             color: #000000
@@ -102,8 +104,122 @@ section.education
     margin-top: 50px
     align-items: flex-end
     &>span
-      font-family: Roboto
       font-weight: bold
       font-size: 54px
       color: #F5F5F5
+
+section.projects
+  margin-top: 100px
+.projects
+  &_item
+    margin-top: 30px
+    display: flex
+    justify-content: space-between
+    &>img
+      width: 650px
+  &_content
+    margin-top: 20px
+    &>h3
+      font-family: Nunito
+      font-size: 36px
+      color: #000000
+    &_date
+      &>span
+        font-size: 14px
+        color: #B8B8B8
+        &:last-child
+          margin-left: 10px
+    &>h4
+      font-family: Nunito
+      font-weight: bold
+      font-size: 18px
+      margin-top: 20px
+    &>p
+      margin-top: 5px
+      max-width: 320px
+    &>a
+      margin-top: 30px
+      display: inline-block
+      font-size: 18px
+      color: #302f2a
+      padding: 12px 70px
+      border: 1px solid black
+      border-radius: 10px
+      transition: all 0.5s
+      &:hover
+        color: #003b3f
+
+.communication
+  line-height: 40px
+  position: relative
+  &_container
+    position: relative
+    padding: 0 70px
+    z-index: 2
+  &_description
+    font-family: Nunito
+    font-weight: 300
+    font-size: 16px
+    line-height: 25px
+    text-align: center
+    color: #686868
+  &_message
+    font-family: Nunito
+    font-weight: 300
+    font-size: 18px
+    line-height: 25px
+    text-align: center
+    color: #686868
+    font-size: 24px
+    margin-top: 20px
+  &_content
+    margin-top: 70px
+    &-center
+      display: flex
+      justify-content: center
+    &-right
+      display: flex
+      justify-content: flex-end
+    &:first-child
+      margin-top: 80px
+    &_title
+      display: flex
+      align-items: center
+      &>h3
+        font-size: 32px
+        letter-spacing: 0.2em
+        color: #000000
+      &>div
+        width: 50px
+        background: black
+        height: 1px
+        margin-left: 20px
+    &_items
+      display: flex
+      &>li
+        font-size: 18px
+        margin-left: 20px
+        &:first-child
+          margin-left: 0
+        &>a
+          color: #000000
+  &>.ux-ui
+    font-weight: 900
+    font-size: 270px
+    color: #F5F5F5
+    position: absolute
+    bottom: 80px
+    left: 50px
+    z-index: 0
+  &>.interaction
+    position: absolute
+    color: #F5F5F5
+    font-weight: 900
+    font-size: 105px
+    transform: rotate(90deg)
+    top: 280px
+    right: -220px
+
+
+    
    
