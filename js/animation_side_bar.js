@@ -1,4 +1,4 @@
-let maxy = 10;
+let maxy = 100;
 let miny = -200;
 
 let classremove = () => {
@@ -130,7 +130,7 @@ document.onscroll = () => {
 
   if (
     document.getElementById('projects').getBoundingClientRect().top < maxy &&
-    document.getElementById('projects').getBoundingClientRect().top > miny
+    document.getElementById('projects').getBoundingClientRect().top > miny - 200
   ) {
     classremove();
     document
@@ -143,7 +143,7 @@ document.onscroll = () => {
 
   if (
     document.getElementById('communication').getBoundingClientRect().top <
-    maxy &&
+    maxy + 300 &&
     document.getElementById('communication').getBoundingClientRect().top >
     miny
   ) {

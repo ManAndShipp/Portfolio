@@ -15,10 +15,16 @@ a
 
 .block-container
   width: 85%
+  @media screen and ( max-width: 780px )
+    width: 100%
   &>section
     width: 100%
     min-height: 100px
     margin-top: 100px
+    @media screen and ( max-width: 1280px )
+      margin-top: 70px
+      @media screen and ( max-width: 780px )
+        margin-top: 40px
     &:first-child
       margin-top: 0
 
@@ -30,6 +36,8 @@ a
     height: 1px
     background: #B7B7B7
     width: 100%
+    @media screen and ( max-width: 1280px )
+      display: none
   &_caption
     width: 100%
     padding: 0 30px
@@ -37,6 +45,8 @@ a
     font-size: 47px
     text-align: center
     color: #000000
+    @media screen and ( max-width: 780px )
+      font-size: 42px
 
 
 .skill>.title>.title_line
@@ -48,8 +58,12 @@ a
     margin-top: 30px
     padding-left: 50px
     display: flex
+    @media screen and ( max-width: 1280px )
+      padding-left: 10px
     &_text
       margin-left: 100px
+      @media screen and ( max-width: 1280px )
+        margin-left: 70px
       &>li
         font-family: Nunito
         font-weight: bold
@@ -58,6 +72,9 @@ a
         text-transform: lowercase
         color: #000000
         margin-top: 40px
+        @media screen and ( max-width: 1280px )
+          font-size: 16px
+          margin-top: 37px
         &:first-child
           margin-top: 0
       &-o
@@ -70,21 +87,35 @@ a
         color: #2E2A22
         text-transform: uppercase
         margin-top: 30px
+        @media screen and ( max-width: 1280px )
+          font-size: 20px
         &:first-child
           margin-top: 0
           
-section.education
-  margin-top: 100px          
+         
 .education
+  position: relative
   &_container
     margin-top: 40px
     padding-left: 50px
     display: flex
     justify-content: space-between
+    @media screen and ( max-width: 1280px )
+      justify-content: flex-start
+      flex-direction: column
+      padding-left: 10px
+      margin-top: 30px
     &>div
+      @media screen and ( max-width: 1280px )
+        margin-top: 40px
+      &:first-child
+        @media screen and ( max-width: 1280px )
+          margin-top: 0
       &>h3       
         font-size: 32px
         font-weight: 400
+        @media screen and ( max-width: 1280px )
+          font-size: 28px
       &>ul
         margin-top: 25px
         &>li
@@ -103,11 +134,26 @@ section.education
   &_language
     margin-top: 50px
     align-items: flex-end
+    @media screen and ( max-width: 1280px )
+      margin-top: 40px
+      align-items: flex-start
     &>span
       font-weight: bold
       font-size: 54px
       color: #F5F5F5
-
+      @media screen and ( max-width: 1280px )
+        display: none
+  &>.once
+    position: absolute
+    display: none
+    font-weight: bold
+    font-size: 40px
+    color: #F3F3F3
+    transform: rotate(90deg)
+    right: -150px
+    top: 300px
+    @media screen and ( max-width: 1280px )
+      display: block
 section.projects
   margin-top: 100px
 .projects
@@ -115,39 +161,72 @@ section.projects
     margin-top: 30px
     display: flex
     justify-content: space-between
+    @media screen and ( max-width: 1280px )
+      flex-direction: column
+      margin-top: 50px
+      border-bottom: 1px solid #f5f5f5
+      padding-bottom: 25px
+    &:last-child
+      @media screen and ( max-width: 1280px )
+        border-bottom: none
+    &:first-child
+    @media screen and ( max-width: 1280px )
+      margin-top: 40px
     &>img
       width: 650px
+      height: auto
   &_content
     margin-top: 20px
-    &>h3
-      font-family: Nunito
-      font-size: 36px
-      color: #000000
+    @media screen and ( max-width: 1280px )
+      display: flex
+      justify-content: space-between
+      margin-top: 15px
+    &_title
+      &>h3
+        font-family: Nunito
+        font-size: 36px
+        color: #000000
+        @media screen and ( max-width: 1280px )
+          margin-top: -5px
     &_date
+      @media screen and ( max-width: 1280px )
+        margin-top: -5px
       &>span
         font-size: 14px
         color: #B8B8B8
+        @media screen and ( max-width: 1280px )
+          font-size: 12px
         &:last-child
           margin-left: 10px
-    &>h4
-      font-family: Nunito
-      font-weight: bold
-      font-size: 18px
-      margin-top: 20px
-    &>p
-      margin-top: 5px
-      max-width: 320px
+    &_text
+      &>h4
+        font-family: Nunito
+        font-weight: bold
+        font-size: 18px
+        margin-top: 20px
+        @media screen and ( max-width: 1280px )
+          margin-top: 0
+      &>p
+        margin-top: 5px
+        max-width: 320px
+        @media screen and ( max-width: 1280px )
+          max-width: 220px
+          font-size: 13px
     &>a
       margin-top: 30px
       display: inline-block
       font-size: 18px
       color: #302f2a
-      padding: 12px 70px
       border: 1px solid black
       border-radius: 10px
       transition: all 0.5s
+      padding: 12px 60px
       &:hover
         color: #003b3f
+      @media screen and ( max-width: 1280px )
+        height: 50px
+        padding: 12px 50px
+        margin-top: 0
 
 .communication
   line-height: 40px
@@ -156,6 +235,8 @@ section.projects
     position: relative
     padding: 0 70px
     z-index: 2
+    @media screen and ( max-width: 1280px )
+      padding: 0 30px
   &_description
     font-family: Nunito
     font-weight: 300
@@ -211,6 +292,8 @@ section.projects
     bottom: 80px
     left: 50px
     z-index: 0
+    @media screen and ( max-width: 1280px )
+      display: none
   &>.interaction
     position: absolute
     color: #F5F5F5
