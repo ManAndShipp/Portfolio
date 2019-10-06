@@ -1,10 +1,16 @@
 $lightgray: #f4f4f4
 .experience>.title>.title_line
   width: 60%
-
+section.experience
+  @media screen and ( max-width: 1280px )
+    margin-top: 70px
 .experience
   margin-top: 80px
   position: relative
+  &>.title
+    &>.title_caption
+      @media screen and ( max-width: 1280px )
+        line-height: 20px
   &_work
     display: flex
     justify-content: space-between
@@ -13,9 +19,11 @@ $lightgray: #f4f4f4
     align-items: center
     @media screen and ( max-width: 1280px )
       padding-left: 10px
+      margin-top: 40px
     @media screen and ( max-width: 670px )
       align-items: center
       justify-content: center
+      margin-top: 30px
     &_content
       @media screen and ( max-width: 1280px )
         position: 
@@ -27,6 +35,8 @@ $lightgray: #f4f4f4
         color: #2E2A22
         @media screen and ( max-width: 670px )
           text-align: center
+          font-size: 24px
+          color: #444039
       &>ul
         padding-left: 30px
         list-style-type: none
@@ -40,8 +50,13 @@ $lightgray: #f4f4f4
           @media screen and ( max-width: 670px )
             text-align: center
             max-width: none
+            font-size: 14px
+            margin-top: 15px
+            font-weight: 500
           &:first-child
             margin-top: 20px
+            @media screen and ( max-width: 670px )
+              margin-top: 15px
     &_date
       position: absolute
       right: 0
@@ -50,7 +65,7 @@ $lightgray: #f4f4f4
       &-mobile
         display: none
         font-weight: 900
-        font-size: 18px
+        font-size: 14px
         color: #BFBFBF
         text-align: center
         @media screen and ( max-width: 670px )

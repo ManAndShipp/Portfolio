@@ -9,6 +9,9 @@
 a
   text-decoration: none
 
+.mobile_menu
+  display: none
+
 .main-container
   display: flex
   padding: 20px
@@ -24,7 +27,7 @@ a
     @media screen and ( max-width: 1280px )
       margin-top: 70px
       @media screen and ( max-width: 780px )
-        margin-top: 40px
+        margin-top: 60px
     &:first-child
       margin-top: 0
 
@@ -55,6 +58,8 @@ a
   display: flex
   flex-direction: column
   &_container
+    @media screen and ( max-width: 670px )
+      display: none
     margin-top: 30px
     padding-left: 50px
     display: flex
@@ -91,11 +96,34 @@ a
           font-size: 20px
         &:first-child
           margin-top: 0
+    &-mobile
+      display: none
+      &>ul
+        &>li
+          font-weight: 600
+          font-size: 15px
+          text-align: center
+          text-transform: lowercase
+          color: #272623
+          text-align: center
+          line-height: 170%
+          &:first-child
+            font-family: Nunito
+            font-weight: bold
+            font-size: 18px
+            color: #2E2A22
+            text-transform: uppercase
+            margin-top: 20px
+            text-align: center
+      @media screen and ( max-width: 670px )
+        display: block
           
          
 .education
   position: relative
   &_container
+    position: relative
+    z-index: 2
     margin-top: 40px
     padding-left: 50px
     display: flex
@@ -105,9 +133,13 @@ a
       flex-direction: column
       padding-left: 10px
       margin-top: 30px
+    @media screen and ( max-width: 670px )
+      margin-top: 10px
     &>div
       @media screen and ( max-width: 1280px )
         margin-top: 40px
+      @media screen and ( max-width: 670px )
+        margin-top: 30px
       &:first-child
         @media screen and ( max-width: 1280px )
           margin-top: 0
@@ -116,27 +148,42 @@ a
         font-weight: 400
         @media screen and ( max-width: 1280px )
           font-size: 28px
+        @media screen and ( max-width: 670px )
+          font-size: 24px
+          text-align: center
       &>ul
         margin-top: 25px
+        @media screen and ( max-width: 670px )
+          margin-top: 10px
         &>li
           display: flex
           align-items: flex-end
           margin-top: 15px
+          @media screen and ( max-width: 670px )
+            flex-direction: column
+            align-items: center
+            margin-top: 15px
           &:first-child
-            margin-top: 0
+            margin-top: 10px
           &>h4
             margin-right: 30px
             font-weight: bold
             font-size: 16px
             color: #000000
+            @media screen and ( max-width: 670px )
+              margin-right: 0
           &>span
             color: #2E2A22
+            @media screen and ( max-width: 670px )
+              margin-top: 5px
   &_language
     margin-top: 50px
     align-items: flex-end
     @media screen and ( max-width: 1280px )
-      margin-top: 40px
+      margin-top: 35px
       align-items: flex-start
+    @media screen and ( max-width: 670px  )
+      align-items: center
     &>span
       font-weight: bold
       font-size: 54px
@@ -154,6 +201,12 @@ a
     top: 300px
     @media screen and ( max-width: 1280px )
       display: block
+    @media screen and ( max-width: 670px )
+      font-size: 20vw
+      top: 100px
+      right: 0
+      left: 0
+      
 section.projects
   margin-top: 100px
 .projects
@@ -172,15 +225,22 @@ section.projects
     &:first-child
     @media screen and ( max-width: 1280px )
       margin-top: 40px
-    &>img
+    &>figure
       width: 650px
       height: auto
+      @media screen and ( max-width: 780px )
+        width: 100%
+      &>img
+        width: 100%
   &_content
     margin-top: 20px
     @media screen and ( max-width: 1280px )
       display: flex
       justify-content: space-between
       margin-top: 15px
+    @media screen and ( max-width: 670px )
+      flex-direction: column
+      align-items: center
     &_title
       &>h3
         font-family: Nunito
@@ -188,6 +248,12 @@ section.projects
         color: #000000
         @media screen and ( max-width: 1280px )
           margin-top: -5px
+        @media screen and ( max-width: 670px )
+          text-align: center
+      @media screen and ( max-width: 670px )
+        display: flex
+        flex-direction: column
+        align-items: center
     &_date
       @media screen and ( max-width: 1280px )
         margin-top: -5px
@@ -199,6 +265,8 @@ section.projects
         &:last-child
           margin-left: 10px
     &_text
+      @media screen and ( max-width: 670px )
+        text-align: center
       &>h4
         font-family: Nunito
         font-weight: bold
@@ -206,27 +274,34 @@ section.projects
         margin-top: 20px
         @media screen and ( max-width: 1280px )
           margin-top: 0
+        @media screen and ( max-width: 670px )
+          margin-top: 20px
       &>p
         margin-top: 5px
         max-width: 320px
         @media screen and ( max-width: 1280px )
           max-width: 220px
           font-size: 13px
+        @media screen and ( max-width: 670px )
+          max-width: 100%
     &>a
       margin-top: 30px
       display: inline-block
       font-size: 18px
-      color: #302f2a
-      border: 1px solid black
+      color: #181715
+      border: 1px solid lighten(gray, 20)
       border-radius: 10px
       transition: all 0.5s
       padding: 12px 60px
       &:hover
         color: #003b3f
+        border-color: gray
       @media screen and ( max-width: 1280px )
         height: 50px
         padding: 12px 50px
         margin-top: 0
+      @media screen and ( max-width: 670px )
+        margin-top: 30px
 
 .communication
   line-height: 40px
@@ -277,6 +352,9 @@ section.projects
         margin-left: 20px
     &_items
       display: flex
+      &-phones
+        @media screen and ( max-width: 670px )
+          flex-direction: column
       &>li
         font-size: 18px
         margin-left: 20px
