@@ -50,6 +50,9 @@ a
     color: #000000
     @media screen and ( max-width: 780px )
       font-size: 42px
+    @media screen and ( max-width: 670px )
+      padding: 0
+      font-size: 38px
 
 nav.mainmenu
   height: 0
@@ -236,6 +239,8 @@ section.experience
     &>.title_caption
       @media screen and ( max-width: 1280px )
         line-height: 20px
+      @media screen and ( max-width: 780px )
+        line-height: 40px
   &_work
     display: flex
     justify-content: space-between
@@ -607,6 +612,9 @@ section.projects
     line-height: 25px
     text-align: center
     color: #686868
+    @media screen and ( max-width: 670px )
+      position: relative
+      z-index: 2
   &_message
     font-family: Nunito
     font-weight: 300
@@ -680,7 +688,7 @@ section.menu_hide
     max-height: 0px
 
 section.menu_container
-  min-height: 80px
+  min-height: 60px
   width: 80px
 .menu
   &_container
