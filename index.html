@@ -13,7 +13,7 @@
 	<link rel="shortcut icon" href="./logo.ico" type="image/x-icon" />
 </head>
 
-<body>
+<body id='body'>
 	<div class="page-container">
 		<div class="black-list bl1"></div>
 		<div class="black-list bl2"></div>
@@ -22,6 +22,28 @@
 		<div class="bg-white main-content">
 			<div class="main-container">
 				<div class="block-container">
+					<section class="menu_container menu_hide" id="mobile-menu">
+						<nav>
+							<div class="menu_toggle">
+								<input type="checkbox" />
+								<div class="menu_burger">
+									<span class="up"></span>
+									<span class="down"></span>
+								</div>
+								<div class="menu_content">
+									<ul>
+										<li><a href="#personal">Personal</a></li>
+										<li><a href="#experience">Experience</a></li>
+										<li><a href="#skill">Skills</a></li>
+										<li><a href="#education">Education</a></li>
+										<li><a href="#projects">Projects</a></li>
+										<li><a href="#communication">Feedback</a></li>
+										<li><a href="./ru.html">TO RUS</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</section>
 					<section class="personal" id="personal">
 						<div class="personal_title">
 							<img src="./img/Me.png" alt="Photo about Vyacheslav Buglov" class="personal_title_photo" />
@@ -59,7 +81,7 @@
 								<ul>
 									<li>
 										<span class="personal_info_download-caption">Ru</span>
-										<a href="#">B.V.Adnreevich.pdf</a>
+										<a target="_blank" href="./docs/RU — B.V.Adnreevich.pdf">B.V.Adnreevich.pdf</a>
 									</li>
 									<li>
 										<span class="personal_info_download-caption">En</span>
@@ -67,7 +89,7 @@
 									</li>
 									<li>
 										<span class="personal_info_download-caption">Ru</span>
-										<a href="#">B.V.Andreevich.doс</a>
+										<a href="./docs/RU — B.V.Adnreevich.doc">B.V.Andreevich.doс</a>
 									</li>
 									<li>
 										<span class="personal_info_download-caption">En</span>
@@ -80,15 +102,15 @@
 								<ul>
 									<li>
 										<span class="personal_info_links-caption">Cases</span>
-										<a href="#">behance</a>
+										<a target="_blank" href="https://www.behance.net/v_a_buglov">behance</a>
 									</li>
 									<li>
 										<span class="personal_info_links-caption">Social</span>
-										<a href="https://vk.com/v.a.buglov">vk</a>
+										<a target="_blank" href="https://vk.com/v.a.buglov">vk</a>
 									</li>
 									<li>
 										<span class="personal_info_links-caption">Social</span>
-										<a href="#">twitter</a>
+										<a target="_blank" href="https://twitter.com/v_a_buglov">twitter</a>
 									</li>
 								</ul>
 							</div>
@@ -102,7 +124,8 @@
 							<div class="title_line"></div>
 						</div>
 						<p>
-							Привет! Давайте знакомиться. Я веб-дизайнер. В первую очередь меня итересует создание удобных пользовательских интерфейсов. Создал этот сайт для того чтобы собирать в
+							Привет! Давайте знакомиться. Я веб-дизайнер. В первую очередь меня итересует создание удобных
+							пользовательских интерфейсов. Создал этот сайт для того чтобы собирать в
 							одном месте все свои проекты над которыми работал/работаю. А так-же для
 							демонстрации своих навыков.
 						</p>
@@ -149,9 +172,9 @@
 								<div class="experience_work_content-caption">
 									UI / UX Designer for Altaycross.ru
 								</div>
-									<p class="experience_work_date-mobile">
-										Jul '19 — Sep '19
-									</p>
+								<p class="experience_work_date-mobile">
+									Jul '19 — Sep '19
+								</p>
 								<ul>
 									<li>
 										Разработал семантическое ядро.
@@ -333,7 +356,7 @@
 										отмечать рост моих навыков и выкладывать проекты.
 									</p>
 								</div>
-								<a href="#">Check</a>
+								<a href="/">Check</a>
 							</div>
 						</div>
 						<div class="projects_item">
@@ -352,7 +375,7 @@
 										Сайт трансфера по Алтайскому краю. Поиск водителей и заказ машины.
 									</p>
 								</div>
-								<a href="#">Check</a>
+								<a target="_blank" href="https://altaycross.herokuapp.com/">Check</a>
 							</div>
 						</div>
 						<div class="projects_item">
@@ -372,7 +395,8 @@
 										государсвенных норм.
 									</p>
 								</div>
-								<a href="#">Check</a>
+								<a target="_blank"
+									href="https://www.behance.net/gallery/76596333/Educational-institution-Web-design">Check</a>
 							</div>
 						</div>
 						<div class="projects_item">
@@ -391,7 +415,7 @@
 										Простой интернет магазин, cозданный в кратчайшие сроки.
 									</p>
 								</div>
-								<a href="#">Check</a>
+								<a target="_blank" href="http://xn--90acib3becu7d.xn--p1ai/">Check</a>
 							</div>
 						</div>
 					</section>
@@ -434,9 +458,10 @@
 										<div></div>
 									</div>
 									<ul class="communication_content_items">
-										<li><a href="#">twitter</a></li>
-										<li><a href="#">vk.com</a></li>
-										<li><a href="#">hh.ru</a></li>
+										<li><a target="_blank" href="https://twitter.com/v_a_buglov">twitter</a></li>
+										<li><a target="_blank" href="https://vk.com/v.a.buglov">vk.com</a></li>
+										<li><a target="_blank"
+												href="https://spb.hh.ru/resume/dc746a69ff0735d6bf0039ed1f745451767663">hh.ru</a></li>
 									</ul>
 								</div>
 							</div>
@@ -475,7 +500,7 @@
 						</li>
 					</ul>
 					<div class="sidebar_ru">
-						<a href="">
+						<a href="./ru.html">
 							<div class="sidebar_ru_text">RU</div>
 							<svg class="sidebar_ru_arrow" width="8" height="40" viewBox="0 0 8 40" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -490,7 +515,7 @@
 		</div>
 	</div>
 </body>
-<script src="./js/animation_side_bar.js"></script>
+<script src="./js/animation_menu.js"></script>
 <script src="./js/smooth_scroll.js"></script>
 
 </html>

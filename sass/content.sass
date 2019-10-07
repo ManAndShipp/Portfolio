@@ -9,8 +9,7 @@
 a
   text-decoration: none
 
-.mobile_menu
-  display: none
+
 
 .main-container
   display: flex
@@ -30,6 +29,7 @@ a
         margin-top: 60px
     &:first-child
       margin-top: 0
+
 
 .title
   display: flex
@@ -51,6 +51,34 @@ a
     @media screen and ( max-width: 780px )
       font-size: 42px
 
+nav.mainmenu
+  height: 0
+.mainmenu
+  width: 100%
+  background-color: black
+  display: none
+  justify-content: flex-end
+  align-items: center
+  &>.menu
+    height: 100px
+    width: 100px
+    background-color: #ffffff
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+    &>.menu_up
+      height: 1px
+      width: 50px
+      background-color: #000000
+    &>.menu_down
+      height: 1px
+      width: 40px
+      background-color: #000000
+      margin-top: 10px
+  @media screen and ( max-width: 780px )
+    display: flex
+    height: 200px
 
 .skill>.title>.title_line
   width: 200%
@@ -188,6 +216,8 @@ a
       font-weight: bold
       font-size: 54px
       color: #F5F5F5
+      -webkit-user-select: none
+      user-select: none
       @media screen and ( max-width: 1280px )
         display: none
   &>.once
@@ -199,6 +229,8 @@ a
     transform: rotate(90deg)
     right: -150px
     top: 300px
+    -webkit-user-select: none
+    user-select: none
     @media screen and ( max-width: 1280px )
       display: block
     @media screen and ( max-width: 670px )
@@ -282,6 +314,7 @@ section.projects
         @media screen and ( max-width: 1280px )
           max-width: 220px
           font-size: 13px
+          line-height: 150%
         @media screen and ( max-width: 670px )
           max-width: 100%
     &>a
@@ -363,6 +396,8 @@ section.projects
         &>a
           color: #000000
   &>.ux-ui
+    -webkit-user-select: none
+    user-select: none
     font-weight: 900
     font-size: 270px
     color: #F5F5F5
@@ -373,6 +408,8 @@ section.projects
     @media screen and ( max-width: 1280px )
       display: none
   &>.interaction
+    -webkit-user-select: none
+    user-select: none
     position: absolute
     color: #F5F5F5
     font-weight: 900
@@ -380,6 +417,100 @@ section.projects
     transform: rotate(90deg)
     top: 280px
     right: -220px
+
+section.menu_hide
+  opacity: 0
+  transition: all 0.5s
+  @media screen and ( max-width: 780px )
+    max-height: 0px
+
+section.menu_container
+  min-height: 80px
+  width: 80px
+.menu
+  &_container
+    display: none
+    transition: all 0.5s
+    @media screen and ( max-width: 780px )
+      display: block
+    right: 5%
+    position: fixed
+    background: rgba(255, 255, 255, 0.95)
+    top: 35px
+    z-index: 4
+    border-radius: 10px
+    @media screen and ( max-width: 670px )
+      right: 10%
+  &_toggle
+    position: relative
+    &>input
+      display: block
+      position: absolute
+      top: 10px
+      right: -25px
+      z-index: 3
+      cursor: pointer
+      height: 35px
+      width: 100px
+      opacity: 0
+      &:checked ~ .menu_content
+        opacity: 1
+        transform: translate(0, 0)
+      &:checked ~ .menu_burger
+        &>.up
+          transform: rotate(-45deg) translate(-8px, 12px)
+          min-width: 40px
+          background: white
+        &>.down
+          transform: rotate(45deg) translate(5px, -1px)
+          background: white
+  &_burger
+    z-index: 2
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    width: 100%
+    height: 70px
+    &>span
+      transition: all 0.5s
+      display: block
+      margin-bottom: 10px
+      height: 1px
+      min-width: 60px
+      background: black
+      &.down
+        min-width: 40px
+  &_content
+    transition: all 0.5s
+    height: 100vh
+    width: 100vw
+    position: fixed
+    background: rgba(0,0,0,0.9)
+    top: 0
+    left: 0
+    opacity: 0
+    transform: translate(0, 100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    &>ul
+      display: flex
+      flex-direction: column
+      align-items: center
+      &>li
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+        &>a
+          text-align: center
+          color: white
+          font-size: 18px
+    
+
+.menu_container>nav
+  width: 100%
 
 
     

@@ -1,6 +1,12 @@
 let maxy = 100;
 let miny = -200;
 
+//for mobile menu
+let pos = 0;
+let temp = 0;
+let gg = document.getElementById('body');
+let menu = document.getElementById('mobile-menu');
+
 let classremove = () => {
   if (
     document
@@ -76,6 +82,35 @@ let classremove = () => {
   }
 };
 document.onscroll = () => {
+  //mobile start
+  pos = gg.getBoundingClientRect().top;
+  if (temp > pos) {
+
+    if (
+      !document
+      .getElementById('mobile-menu')
+      .classList.contains('menu_hide')
+    ) {
+      document
+        .getElementById('mobile-menu')
+        .classList.add('menu_hide');
+    }
+  }
+  if (temp < pos) {
+    if (
+      document
+      .getElementById('mobile-menu')
+      .classList.contains('menu_hide')
+    ) {
+      document
+        .getElementById('mobile-menu')
+        .classList.remove('menu_hide');
+    }
+  }
+  temp = pos;
+  //mobile end
+
+
   if (
     document.getElementById('skill').getBoundingClientRect().top < maxy &&
     document.getElementById('skill').getBoundingClientRect().top > miny
@@ -88,7 +123,6 @@ document.onscroll = () => {
       .getElementById('askills')
       .classList.add('sidebar_links_link-o');
   }
-
   if (
     document.getElementById('personal').getBoundingClientRect().top < maxy &&
     document.getElementById('personal').getBoundingClientRect().top > miny
